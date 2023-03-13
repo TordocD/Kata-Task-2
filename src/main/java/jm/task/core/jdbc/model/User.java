@@ -4,7 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
+
+@Table(name = "user")
 public class User {
     @Id
     private Long id;
@@ -22,7 +23,8 @@ public class User {
 
     }
 
-    public User(String name, String lastName, Byte age) {
+    public User(Long id, String name, String lastName, Byte age) {
+        this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
